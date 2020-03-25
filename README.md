@@ -3,13 +3,13 @@
 
 ## 'How to use' List
 잡다한 설명 없이 코드 위주의 사용법을 정리
-* markdown 언어 사용법
-* Github Branch 관련 사용법
-* Github Issue 관련 사용법
+* [markdown](markdown/markdown.md) 언어 사용법
+* [Github Branch](Github/Branches.md) 관련 사용법
+* [Github Issue]() 관련 사용법
 
 ## Record of work
 기본적인 사용법 외에 직접 사옹해봤던 기술들 메모
-* Repo 이사하기
+* [Repo 이사하기](record_of_work/repo_address_transfer.md)
 
 ## Reference
 1. [깃허브로 취업하기](https://sujinlee.me/professional-github/)
