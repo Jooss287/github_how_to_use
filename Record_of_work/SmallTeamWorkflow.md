@@ -2,19 +2,20 @@
 깃을 이용한 해서 처음 프로젝트를 시작하고 많은 수행착오를 겪었다.
 단순한 Branches 사용법이나 Commit, push 등 하나 하나 배워가면서 시작한 프로젝트 리포지토리는 매번 workflow가 바뀌는 것을 볼 수 있었다.   
 Pull request의 사용법에 대해 고민하던 중 아 사람들은 협업을 이런식으로 하는구나! 라고 이해하고 난 뒤에 프로젝트의 workflow를 바꾸어 진행하였다.   
-~~앞으로 또 바뀔 수 있겠지만 현재까지는~~
+~~앞으로 또 바뀔 수 있겠지만 현재까지는~~   
+
 
 #### *글 내용 빨리 보기*
 * [Pull request 를 알기 이전](Record_of_work/SmallTeamWorkflow.md:11)
 * [Pull request 를 알고 난 후](Record_of_work/SmallTeamWorkflow.md:26)
-* [최종 Team workflow]()
+* [최종 Team workflow](Record_of_work/SmallTeamWorkflow.md:43)
 
 ## Branch, Commit, Push 만을 이용하던 시기
 처음 Branch를 보고 파일을 일일이 복사해가면서 형상관리하던 내가 정말 뒤떨어져있단것을 깨달았었다.   
 [Branch 종류](https://gmlwjd9405.github.io/2018/05/11/types-of-git-branch.html)
 를 보고 2~3인 정도의 소규모 협업에는 완전하게 적용하기는 힘들겠다고 판단, 간소화시켜 적용하였다.   
-![초기 브랜치 사용](doc_connected_image/Small_team_branches.JPG)
- 
+![초기 브랜치 사용](doc_connected_image/NonContributor_workflow.JPG)
+
 Branch name | explain
 ------------|---------
 master      | 배포용
@@ -39,15 +40,24 @@ Pull request는 new branch에서 작업을 하고 merge를 위한 허락을 구�
 [Git fork와 clone의 차이점](https://velog.io/@imacoolgirlyo/Git-fork%EC%99%80-clone-%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90-5sjuhwfzgp)
 에 관한 내용을 읽고 나서야 모든것이 연결!
  
-## Team work flow 
+## Team workflow
 Github는 협업을 하기 위한 유용한 도구이다.
-'협업'을 잘 하기 위해서 프로젝트에 참여하는 여러 사람들의 소통이 원활하고 그러면서도 일관성있게 프로젝트가 나아가야 한다. 
- 
+'협업'을 잘 하기 위해서 프로젝트에 참여하는 여러 사람들의 소통이 원활하고 그러면서도 일관성있게 프로젝트가 나아가야 한다.
 Github에서는 Pull request를 사용하여 이러한 방식을 구현하였다.
-프로젝트의 기본이 되는 Base Repository를 생성하고 개인은 이 Repository를 Fork해 간다.
-Base Repository에서 바로 작업을 해도 되지만 프로젝트의 모든 권한을 가지고 있는 contributor만 가능하며 기존에 사용하던 private브랜치처럼 개인이 작업하고 중간에 commit하는 모든 것들이 함께 기록되게 된다   
+원하는 부분을 추가, 수정하여 puah 한 다음 merge 하면서 pull request를 이용하여 다른 이용자들과 코드리뷰를 하는 방식을 기반으로 하고 있다.
 
-*최종적으로 진행하게 된 workflow*    
-![적용한 team workflow](doc_connected_image/team_workflow.jpg)   
+Contributor는 Repository를 관리하는 관리자로서 모든 권한을 가지고 있고,   
+Repositroy에 권한이 없는 일반 유저는 Fork를 사용하여 내용을 복사한 후 개인 Repository에서 작업하여 원래의 Repository으로 Pull request하여 Contributor들과 코드리뷰를 하고 수정한 코드를 merge, reject된 것을 확인 할 수 있다.  
+
+
+###Contributor 
+Contributor은 프로젝트의 모든 권한을 가지고 있으므로 내부 이용자들과의 소통을 위해 Issue에 대한 branch를 만들고 pull request를 이용하여 다른 사람들과 아이디어를 공유한다.
+
+![Contributor 간의 프로젝트 workflow](doc_connected_image/Contributor_workflow.JPG)
+
+###Non Contributor
+프로젝트가 진행되고 있는 Repository를 Fork해 간다. 개인 Repository처럼 이용하면서 기능을 추가&수정하여 Contributor들에게 Pull request를 띄워 수정 한 부분에 대해 기여 할 수 있게 된다.   
+    
+![Non Contributor 프로젝트 기여 workflow](doc_connected_image/NonContributor_workflow.JPG)   
 
 Fork로 Repository를 복사하고 개인 저장소(로컬)로 옮겨 작업 한 뒤 commit-push 이후 pull request를 통해 모든 reviewer와 함께 코드를 보고 코드리뷰를 진행한다. 
