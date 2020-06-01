@@ -11,7 +11,7 @@
 
 ## 'How to use' List
 잡다한 설명 없이 코드 위주의 사용법을 정리, 관련 설명이 필요할 경우 Reference link로 대체
-* [Git을 이용한 간단한 작업 프로세스]()
+* [Git을 이용한 간단한 작업 프로세스](How_to_use/git_work_process.md)
 *
 *
 
